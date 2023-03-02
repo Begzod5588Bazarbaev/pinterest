@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu{% endblock %}
+
+{% block header %}
+	{% for i in rubric %}
+		<a href="/rubric/{{i.pk}}">{{i.name}}</a>
+	{% endfor %}
+{% endblock %}
+
+{% block content %}
+	{% for i in posts %}
+		<a href="/{{i.pk}}"><img src="{{ i.image.url }}"></a>
+	{% endfor %}
+{% endblock %}

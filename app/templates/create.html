@@ -1,0 +1,7 @@
+<form method="post" enctype="multipart/form-data">
+	{% if user.is_staff %}
+		{% csrf_token %}
+		{{ form.as_p }}
+	{% endif %}
+	<button type="submit">Опубликовать</button>
+</form>
